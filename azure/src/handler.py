@@ -1,3 +1,7 @@
+##########
+#  AZURE #
+##########
+
 import azure.functions as func
 from . import datalex
 

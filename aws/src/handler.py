@@ -1,13 +1,22 @@
+##########
+#  AWS   #
+##########
+
 import json
 from src import datalex
+from src import database
 
 def hello(event, context):
 
-    body = datalex.calculate(event["queryStringParameters"])
+    mongodb = database.MongoDB_Collection()
+
+    body = datalex.calculate(
+            event["queryStringParameters"],
+            mongodb)
 
     response = {
         "statusCode": 200,
-        "body": body
+        "body": json.dumps(body)
     }
 
     return response

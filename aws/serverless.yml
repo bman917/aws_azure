@@ -23,6 +23,7 @@ service: aws
 provider:
   name: aws
   runtime: python3.8
+  region: eu-west-1
 
 # you can overwrite defaults here
 #  stage: dev
@@ -56,6 +57,8 @@ provider:
 #  exclude:
 #    - exclude-me.py
 #    - exclude-me-dir/**
+plugins:
+  - serverless-python-requirements
 
 functions:
   hello:
