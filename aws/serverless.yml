@@ -67,7 +67,9 @@ functions:
       - http:
           path: api/hello
           method: get
-
+          authorizer:
+            name: authorizer
+            arn: arn:aws:cognito-idp:eu-west-1:801969601058:userpool/eu-west-1_od26ItED0
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
